@@ -278,3 +278,10 @@ let militaryUnit = {
     console.log(militaryUnit.commandStructure.chiefOfStaff.contact.phone);
   };
 Mission1()
+
+const Mission2 = ()=>{
+   return militaryUnit.personnel.length;
+}
+
+
+console.log(Mission2());
