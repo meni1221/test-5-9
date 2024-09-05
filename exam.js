@@ -272,16 +272,46 @@ let militaryUnit = {
   
   };
 
-  const Mission1 =()=>{
+  const Mission1 =(militaryUnit)=>{
     console.log(militaryUnit.commandStructure.chiefOfStaff.rank);
     console.log(militaryUnit.commandStructure.chiefOfStaff.name);
     console.log(militaryUnit.commandStructure.chiefOfStaff.contact.phone);
   };
-Mission1()
+Mission1(militaryUnit)
 
-const Mission2 = ()=>{
+const Mission2 = (militaryUnit)=>{
    return militaryUnit.personnel.length;
 }
 
 
-console.log(Mission2());
+console.log(Mission2(militaryUnit));
+
+const Mission3 = (militaryUnit, NewDeployment)=>{
+    militaryUnit.history.push({eventDate:militaryUnit.currentDeployment.startDate,eventDescription: militaryUnit.currentDeployment.mission})
+    militaryUnit.currentDeployment = NewDeployment
+    return militaryUnit
+}
+const NewDeployment = {
+    
+    location: "Middle East",
+  
+    mission: "gaza",
+
+    startDate: "2024-11-31",
+
+    estimatedEndDate: "2024-12-31"
+}
+
+console.log( Mission3(militaryUnit,NewDeployment)
+);
+
+const Mission4 = ()=>{
+}
+
+Mission4()
+
+const Mission5 = ()=>{
+
+}
+
+Mission5()
