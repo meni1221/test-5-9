@@ -315,3 +315,11 @@ const Mission5 = ()=>{
 }
 
 Mission5()
+
+module.exports = {
+    Mission1,
+    Mission2,
+    Mission3,
+    Mission4,
+    Mission5
+}
